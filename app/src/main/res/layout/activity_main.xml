@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/selectFileButtonId"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/button_shape"
+        android:drawableLeft="@drawable/ic_insert_drive_file_white_24dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="30dp"
+        android:text=" Select a File"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/fileReferenceId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:autoLink="web"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:text="No File Selected"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scanQRCodebuttonId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectFileButtonId" />
+
+    <Button
+        android:id="@+id/uploadButtonId"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_shape"
+        android:drawableLeft="@drawable/ic_cloud_upload_white_24dp"
+        android:drawablePadding="5dp"
+        android:padding="10dp"
+        android:text="Generate QR"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/selectFileButtonId"
+        app:layout_constraintTop_toBottomOf="@+id/fileReferenceId" />
+
+    <Button
+        android:id="@+id/scanQRCodebuttonId"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:drawableLeft="@drawable/ic_search_white_24dp"
+        android:drawablePadding="5dp"
+        android:padding="10dp"
+        android:text="Scan QR Code"
+        app:layout_constraintBaseline_toBaselineOf="@+id/uploadButtonId"
+        app:layout_constraintEnd_toEndOf="@+id/selectFileButtonId" />
+
+    <ImageView
+        android:id="@+id/qrCodeImageViewId"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uploadButtonId"
+        android:src="@drawable/no"/>
+
+
+</android.support.constraint.ConstraintLayout>
